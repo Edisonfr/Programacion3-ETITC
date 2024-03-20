@@ -1,14 +1,14 @@
 body {
     max-width: 800px;
     margin: 0 auto;
-    background-color: aquamarine;
+    background-color: moccasin;
   }
 
   .sender-column {
     text-align: right;
   }
   .sender-column strong {
-    color: red;
+    color: black;
   }
 
   h1 {
@@ -18,6 +18,11 @@ body {
 
   h2 {
     font-size: 1.3em;
+    color: green;
+  }
+  h3 {
+    font-size: 1.3em;
+    color: chocolate;
   }
 
   p,ul,ol,dl,address {
@@ -27,3 +32,7 @@ body {
   p, li, dd, dt, address {
     line-height: 1.5;
   }
+  .center-img {
+    display: block;
+    margin: 0 auto;
+}
