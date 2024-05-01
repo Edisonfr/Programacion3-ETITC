@@ -1,0 +1,176 @@
+"notas 30/04"
+
+edisonforero@ubuntuedison:~$ su
+Contraseña: 
+root@ubuntuedison:/home/edisonforero# systemctl start tomcat
+root@ubuntuedison:/home/edisonforero# systemctl status tomcat
+* tomcat.service - Tomcat
+     Loaded: loaded (/etc/systemd/system/tomcat.service; disabled; vendor prese>
+     Active: active (running) since Tue 2024-04-30 17:27:03 -05; 16min ago
+   Main PID: 3986 (java)
+      Tasks: 30 (limit: 2260)
+     Memory: 278.2M
+        CPU: 15.042s
+     CGroup: /system.slice/tomcat.service
+             `-3986 /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -Djava.util>
+
+abr 30 17:27:03 ubuntuedison systemd[1]: Starting Tomcat...
+abr 30 17:27:03 ubuntuedison startup.sh[3976]: Existing PID file found during s>
+abr 30 17:27:03 ubuntuedison startup.sh[3976]: Removing/clearing stale PID file.
+abr 30 17:27:03 ubuntuedison startup.sh[3976]: Tomcat started.
+abr 30 17:27:03 ubuntuedison systemd[1]: Started Tomcat.
+lines 1-15/15 (END)
+
+root@ubuntuedison:/home/edisonforero# ls   
+alu3.txt    Escritorio   miprimerparcial.txt  Plantillas     sisope2
+arci.txt    esto         nombres.txt          practica1.txt  snap
+Descargas   fichero.txt  Público             prueba1.txt    Vídeos
+documento1  Imágenes    parc                 prueba2.txt
+Documentos  Música      Parcial              sisop2
+root@ubuntuedison:/home/edisonforero# sudo su
+root@ubuntuedison:/home/edisonforero# cd /opt/tomcat/
+root@ubuntuedison:/opt/tomcat# ls
+bin           CONTRIBUTING.md  logs       RELEASE-NOTES  webapps
+BUILDING.txt  lib              NOTICE     RUNNING.txt    work
+conf          LICENSE          README.md  temp
+root@ubuntuedison:/opt/tomcat# cd webapps/
+root@ubuntuedison:/opt/tomcat/webapps# ls
+basic-servlet-example  examples      host-manager  myapp           ROOT
+docs                   HelloServlet  manager       Primer-parcial
+root@ubuntuedison:/opt/tomcat/webapps# cd basic-servlet-example/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# ls
+clases               firstServlet.jsp  ServletSample
+dataPlaceHolder.jsp  index.html        WEB-INF
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# cd clases/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/clases# ls
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/clases# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# cd WEB-INF/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# ls
+clases  src  web.xml
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# cd src/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# ls
+com
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# cd com/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/com# ls
+test
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/com# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# ls
+com
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# ls
+clases  src  web.xml
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# cd clases/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/clases# ls
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/clases# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# ls   
+clases  dataPlaceHolder.jsp  firstServlet.jsp  index.html  ServletSample  WEB-INF
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# cd clases/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/clases# ls
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/clases# ls
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/clases# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# ls
+clases  dataPlaceHolder.jsp  firstServlet.jsp  index.html  ServletSample  WEB-INF
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# rm -r ServletSample/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# rm -r clases/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# ls
+dataPlaceHolder.jsp  firstServlet.jsp  index.html  WEB-INF
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# cd WEB-INF/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# ls
+clases  src  web.xml
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# cd clases/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/clases# ls
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/clases# mkdir mypkg
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/clases# ls
+mypkg
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/clases# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# ls   
+clases  src  web.xml
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# cd src/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# ls
+com
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# rm -r com/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# mkdir mypkg
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# ls
+clases  src  web.xml
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# ls
+dataPlaceHolder.jsp  firstServlet.jsp  index.html  WEB-INF
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# nano dataPlaceHolder.jsp 
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# nano form_input.html
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# nano index.html 
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# ls
+dataPlaceHolder.jsp  firstServlet.jsp  form_input.html  index.html  WEB-INF
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example# cd WEB-INF/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# ls
+clases  src  web.xml
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# cd src/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# cd mypkg/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# nano DataPlaceHolderServlet.java
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# javac -cp /opt/tomcat/lib/servlet-api.jar -d classes src/mypkg/DataPlaceHolderServlet.java 
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# cd src/mypkg/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# nano EchoServlet.java
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# cd ..        
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# javac -cp /opt/tomcat/lib/servlet-api.jar -d classes src/mypkg/EchoServlet.java           
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# cd src/mypkg/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# nano EnvironmentVariableServlet.java
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# javac -cp /opt/tomcat/lib/servlet-api.jar -d classes src/mypkg/EnvironmentVariableServlet.java 
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# cd src/mypkg/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# nano FirstServlet.java
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# javac -cp /opt/tomcat/lib/servlet-api.jar -d classes src/mypkg/FirstServlet.java               
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# cd src/mypkg/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# nano HelloServlet.java
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# javac -cp /opt/tomcat/lib/servlet-api.jar -d classes src/mypkg/HelloServlet.java 
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# CD src/mypkg/
+CD: command not found
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# cd src/mypkg/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# nano LogoutServlet.java
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# javac -cp /opt/tomcat/lib/servlet-api.jar -d classes src/mypkg/LogoutServlet.java 
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# cd src/mypkg/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# TestDataPlaceHolderServlet.java
+TestDataPlaceHolderServlet.java: command not found
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# nano TestDataPlaceHolderServlet.java
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# javac -cp /opt/tomcat/lib/servlet-api.jar -d classes src/mypkg/TestDataPlaceHolderServlet.java 
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# cd src/mypkg/
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# nano TestSessionServlet.java
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src/mypkg# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF/src# cd ..
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# javac -cp /opt/tomcat/lib/servlet-api.jar -d classes src/mypkg/TestSessionServlet.java         
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# ls
+clases  classes  src  web.xml
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# nano web.xml 
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# rm web.xml 
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# nano web.xml
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# systemctl start tomcat
+root@ubuntuedison:/opt/tomcat/webapps/basic-servlet-example/WEB-INF# systemctl status tomcat
+* tomcat.service - Tomcat
+     Loaded: loaded (/etc/systemd/system/tomcat.service; disabled; vendor preset: enabled)
+     Active: active (running) since Tue 2024-04-30 17:27:03 -05; 1h 27min ago
+   Main PID: 3986 (java)
+      Tasks: 30 (limit: 2260)
+     Memory: 110.3M
+        CPU: 32.059s
+     CGroup: /system.slice/tomcat.service
+             `-3986 /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -Djava.util.logging.conf>
+
+abr 30 17:27:03 ubuntuedison systemd[1]: Starting Tomcat...
+abr 30 17:27:03 ubuntuedison startup.sh[3976]: Existing PID file found during start.
+abr 30 17:27:03 ubuntuedison startup.sh[3976]: Removing/clearing stale PID file.
+abr 30 17:27:03 ubuntuedison startup.sh[3976]: Tomcat started.
+abr 30 17:27:03 ubuntuedison systemd[1]: Started Tomcat.
+lines 1-15/15 (END)
+
